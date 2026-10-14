@@ -8,6 +8,13 @@ scanf("%d",&n);
 printf("Nhap vao so k: ");
 scanf("%d",&k);
 
+ char name[n][50];
+
+    for (int i = 0; i < n; i++) {
+        printf("Nhap vao ten thu %d: ", i + 1);
+        scanf("%49s", name[i]);
+    }
+
 
 int arr[k];
 for (int i=0;i<k;i++){
@@ -15,7 +22,7 @@ for (int i=0;i<k;i++){
 }
 
 for (int i=0;i<k;i++){
-    printf("%d",arr[i]);
+    printf("%s",name[arr[i]-1]);
 }
 printf("\n");
 
@@ -37,7 +44,7 @@ break;
           arr[i]=arr[i-1]+1;  
   }
 for (int i=0;i<k;i++){
-    printf("%d",arr[i]);
+    printf("%s",name[arr[i]-1]);
 }
 printf("\n");
 
